@@ -5,14 +5,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-
-
-
-# Example data for Group A (Button Click)
+# Example data for Group A (Withdraw money using Button Click)
 data_group_a = {
     'TransactionSuccess': np.random.choice([0, 1], size=33, p=[0.3, 0.7])
 }
-# Example data for Group B (QR Code Usage)
+# Example data for Group B (Withdraw money using QR Code)
 data_group_b = {
     'TransactionSuccess': np.random.choice([0, 1], size=33, p=[0.4, 0.6])
 }
@@ -35,8 +32,12 @@ pivoted_df_swapped = pivoted_df_swapped.rename(columns={'0':'failure', '1': 'suc
 
 # Perform Chi-square test
 chi2, p, _, _ = chi2_contingency(pivoted_df_swapped)
-
+alpha=0.05
 # Display the results of the chi-square test
 print("\nChi-square test results:")
 print(f"Chi2 value: {chi2}")
 print(f"P-value: {p}")
+if p < alpha:
+    print("Reject the null hypothesis. There is a significant difference between the groups.")
+else:
+    print("Fail to reject the null hypothesis. There is no significant difference between the groups.")

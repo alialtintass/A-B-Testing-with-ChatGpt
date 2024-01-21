@@ -1,8 +1,8 @@
 from scipy.stats import shapiro
 
 # Shapiro-Wilk test for normality
-stat_group_a, p_value_group_a = shapiro(data_group_a['PurchaseAmount_USD'])
-stat_group_b, p_value_group_b = shapiro(data_group_b['PurchaseAmount_USD'])
+stat_group_a, p_value_group_a = shapiro(df_group_a['WithDrawalAmount_USD'])
+stat_group_b, p_value_group_b = shapiro(df_group_b['WithDrawalAmount_USD'])
 
 # Display the results
 print("Shapiro-Wilk Test for Normality:")
