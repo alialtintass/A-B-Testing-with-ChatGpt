@@ -6,17 +6,16 @@ np.random.seed(42)
 
 # Generate sample data for Group A (NFC withdrawal amount) with an exponential distribution
 data_group_a = {
-    'WithDrawalAmount_USD': np.random.exponential(scale=50.000, size=34)
+    'WithDrawalAmount_USD': np.random.gamma(2, 65.000, 34)
 }
 df_group_a = pd.DataFrame(data_group_a)
-df_group_a.WithDrawalAmount_USD.mean()
 
 # Generate sample data for Group A (NFC withdrawal amount) with an exponential distribution
 data_group_b = {
-    'WithDrawalAmount_USD': np.random.exponential(scale=60.000, size=34)
+    'WithDrawalAmount_USD': np.random.gamma(2, 50.000, 34)
 }
 df_group_b = pd.DataFrame(data_group_b)
-df_group_b.WithDrawalAmount_USD.mean()
+
 
 # Shapiro-Wilk test for normality
 stat_group_a, p_value_group_a = shapiro(df_group_a['WithDrawalAmount_USD'])

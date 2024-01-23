@@ -1,6 +1,7 @@
 #Levene's Test for checking homogeneity of group variances
 from scipy.stats import levene
 
+
 statistic, p_value = levene(df_group_a['WithDrawalAmount_USD'], df_group_b['WithDrawalAmount_USD'])
 
 # Display the results
