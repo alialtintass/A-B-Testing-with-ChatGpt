@@ -8,7 +8,7 @@ data_group_a = {
 }
 df_group_a = pd.DataFrame(data_group_a)
 
-# Generate sample data for Group A (NFC withdrawal amount) with an exponential distribution
+# Generate sample data for Group B (Debit Card withdrawal amount) with an exponential distribution
 data_group_b = {
     'WithDrawalAmount_USD': np.random.gamma(2, 50.000, 34)
 }
