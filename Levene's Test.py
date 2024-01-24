@@ -10,6 +10,6 @@ print(f"Test Statistic: {statistic}")
 print(f"P-value: {p_value}")
 alpha= 0.05
 if p_value < alpha:
-    print("Reject the null hypothesis. There is a significant difference between the groups.")
+    print("Reject the null hypothesis. Unequal variances are provided.")
 else:
-    print("Fail to reject the null hypothesis. There is no significant difference between the groups.")
+    print("Fail to reject the null hypothesis. Homogenous variances are provided  .")
