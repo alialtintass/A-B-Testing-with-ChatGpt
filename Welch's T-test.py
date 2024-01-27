@@ -29,7 +29,7 @@ else:
     print("Fail to reject the null hypothesis. There is no significant difference between the groups.")
 
 #Another Statistic Package for Welch's t-test. Each test can be used for validation.
-result = pg.ttest(df_group_a['PurchaseAmount_USD'], df_group_b['PurchaseAmount_USD'], correction=False)
+result = pg.ttest(df_group_a['WithDrawalAmount_USD'], df_group_b['WithDrawalAmount_USD'], correction=False)
 
 # Interpret the results
 alpha = 0.05  # Set your significance level
