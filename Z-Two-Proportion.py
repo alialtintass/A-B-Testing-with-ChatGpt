@@ -6,8 +6,10 @@ from statsmodels.stats.proportion import proportions_ztest
 np.random.seed(42)
 
 #Generate fictive data for Group A (clicks and impressions)
-group_a_clicks = np.random.randint(10, 50, size=33)  # Random clicks between 10 and 50
-group_a_impressions = np.random.randint(100, 500, size=33)  # Random impressions between 100 and 500
+group_a_clicks = np.random.choice([0, 1], size=33, p=[0.4, 0.6])
+# Random clicks between 10 and 50
+group_a_impressions = np.random.choice([0, 1], size=33, p=[0.1, 0.9])
+# Random impressions between 100 and 500
 # Create a dataframe for Group A
 data_group_a = {
     'Clicks': group_a_clicks,
@@ -19,8 +21,8 @@ df_group_a = pd.DataFrame(data_group_a)
 
 
 #Generate fictive data for Group B (clicks and impressions)
-group_b_clicks = np.random.randint(15, 55, size=33)  # Random clicks between 15 and 55
-group_b_impressions = np.random.randint(120, 550, size=33)  # Random impressions between 120 and 550
+group_b_clicks = np.random.choice([0, 1], size=33, p=[0.6, 0.4])  # Random clicks between 15 and 55
+group_b_impressions = np.random.choice([0, 1], size=33, p=[0.1, 0.9])# Random impressions between 120 and 550
 
 # Create a dataframe for Group A
 data_group_b = {
