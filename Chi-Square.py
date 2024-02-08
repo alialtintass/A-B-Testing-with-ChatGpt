@@ -5,11 +5,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-# Example data for Group A (Withdraw money using Button Click)
+# Example data for Group A (Loan application on browser)
 data_group_a = {
     'TransactionSuccess': np.random.choice([0, 1], size=33, p=[0.3, 0.7])
 }
-# Example data for Group B (Withdraw money using QR Code)
+# Example data for Group B (Loan application in the banking mobile application)
 data_group_b = {
     'TransactionSuccess': np.random.choice([0, 1], size=33, p=[0.4, 0.6])
 }
